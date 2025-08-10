@@ -58,10 +58,14 @@ const perguntas = [
     },
     {
         enunciado: "Com que frequência você se exercita?",
-        alternativa: [
+        alternativas: [
             {
                 texto: "1 a 2 vezes por semana",
                 afirmacao:  "Você já incorporou alguma atividade física na rotina, mas ainda pode evoluir."
+            },
+            {
+                texto: "3 a 5 vezes por semana",
+                afirmacao: "Você tem uma boa regularidade nos treinos e colhe bons resultados."
             },
             {
                 texto: "Todos os dias",
