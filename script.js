@@ -4,141 +4,89 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntas = 
-        {
-  "enunciado": "Qual é o seu animal de estimação preferido?",
-  "alternativas": [
+const perguntas = [
     {
-      "texto": "Cachorro",
-      "afirmacao": [
-        "Você gosta de lealdade e companheirismo.",
-        "Continue dedicando tempo e carinho ao seu amigo canino."
-      ]
+        enunciado: "Qual é o seu nível de prática de atividades físicas atualmente?",
+        alternativas: [
+            {
+               texto: "Baixo",
+                afirmacao: "Você está começando sua jornada no mundo das atividades físicas."
+            },
+            {
+                texto: "Médio",
+                afirmacao: "Você pratica exercícios com alguma frequência e já sente os benefícios."
+            },
+            {
+                texto: "Alto",
+                afirmacao: "Você mantém uma rotina intensa e disciplinada de treinos."
+            }
+        ]
     },
     {
-      "texto": "Gato",
-      "afirmacao": [
-        "Você aprecia a independência e o charme dos felinos.",
-        "Continue proporcionando um ambiente seguro e confortável."
-      ]
+        enunciado: "Qual tipo de atividade física você prefere?",
+        alternativas: [ 
+            {
+                 texto: "Esportes coletivos",
+                afirmacao: "Você gosta de trabalho em equipe e da energia de jogar com outras pessoas."
+            },
+            {
+                texto: "Esportes individuais",
+                afirmacao: "Você aprecia desafios pessoais e o foco em seu próprio desempenho."
+            },
+            {
+                texto: "Atividades ao ar livre",
+                afirmacao: "Você valoriza contato com a natureza enquanto se exercita."
+            }
+        ]
     },
     {
-      "texto": "Outro",
-      "afirmacao": [
-        "Você gosta de animais diferentes e únicos.",
-        "Continue aprendendo sobre as necessidades específicas do seu pet."
-      ]
-    }
-  ]
-}
-
+        enunciado: "Qual é o seu principal objetivo ao praticar exercícios?",
+        alternativas: [
+            {
+                 texto: "Saúde e bem-estar",
+                afirmacao: "Você vê o exercício como uma ferramenta para manter corpo e mente saudáveis."
+            },
+            {
+                texto:"Desempenho e competição",
+                afirmacao:  "Você busca superar limites e se destacar no esporte."
+            },
+            {
+                texto: "Socialização",
+                afirmacao: "Você usa o esporte como forma de criar laços e conhecer pessoas."
+               }
+        ]
+    },
+    {
+        enunciado: "Com que frequência você se exercita?",
+        alternativa: [
+            {
+                texto: "1 a 2 vezes por semana",
+                afirmacao:  "Você já incorporou alguma atividade física na rotina, mas ainda pode evoluir."
+            },
+            {
+                texto: "Todos os dias",
+                afirmacao: "Você mantém um compromisso diário com a atividade física."
+            }
+        ]
+    },
 {
-  "enunciado;Com que frequência você leva seu pet ao veterinário?"
-  "alternativas"; [
-    {
-      "texto": "Raramente",
-      "afirmacao": [
-        "Visitas regulares ao veterinário são importantes para a saúde do animal.",
-        "Tente estabelecer um cronograma anual de consultas."
-      ]
-    },
-    {
-      "texto": "Às vezes",
-      "afirmacao": [
-        "Você já se preocupa com a saúde do seu pet.",
-        "Aumente a frequência para prevenir problemas."
-      ]
-    },
-    {
-      "texto": "Regularmente",
-      "afirmacao": [
-        "Parabéns! Você está cuidando bem da saúde do seu animal.",
-        "Continue assim para garantir uma vida longa e saudável."
-      ]
+         enunciado: "Você mantém um compromisso diário com a atividade física?",
+         alternativas: [
+            {
+                texto:  "Manhã",
+                afirmacao:  "Você gosta de começar o dia com energia e disposição."
+            },
+            {
+                texto: "Tarde",
+                afirmacao: "Tarde",
+            },
+            {
+                texto:  "Noite",
+                afirmacao: "Você gosta de encerrar o dia com um treino relaxante ou intenso."
+            }
+        ]
     }
-  ]
-}
- 
-{
-  "enunciado"; "Qual é a sua atividade preferida com seu animal?",
-  "alternativas"; [
-    {
-      "texto": "Passear",
-      "afirmacao": [
-        "Ótimo para o bem-estar físico e mental do pet.",
-        "Continue proporcionando momentos ao ar livre."
-      ]
-    },
-    {
-      "texto": "Brincar em casa",
-      "afirmacao": [
-        "Ajuda a fortalecer o vínculo e manter o animal ativo.",
-        "Varie os brinquedos para evitar o tédio."
-      ]
-    },
-    {
-      "texto": "Treinar truques",
-      "afirmacao": [
-        "Estimula a inteligência e a obediência do pet.",
-        "Continue usando reforços positivos no aprendizado."
-      ]
-    }
-  ]
-}
-
-{
-  "enunciado"; "Qual tipo de animal mais desperta seu interesse?",
-  "alternativas"; [
-    {
-      "texto": "Domésticos",
-      "afirmacao": [
-        "Você gosta de animais que convivem no dia a dia.",
-        "Continue aprendendo sobre cuidados e alimentação adequada."
-      ]
-    },
-    {
-      "texto": "Selvagens",
-      "afirmacao": [
-        "Você tem curiosidade por espécies livres na natureza.",
-        "Continue conhecendo sobre a preservação e proteção desses animais."
-      ]
-    },
-    {
-      "texto": "Marinhos",
-      "afirmacao": [
-        "Você se encanta com a vida no mar.",
-        "Continue aprendendo sobre a importância dos oceanos para a fauna."
-      ]
-    }
-  ]
-}
-
-{
-  "enunciado"; "Como você reage ao encontrar um animal abandonado?",
-  "alternativas"; [
-    {
-      "texto": "Ignoro",
-      "afirmacao": [
-        "Animais abandonados precisam de ajuda.",
-        "Considere acionar ONGs ou abrigos para resgatá-los."
-      ]
-    },
-    {
-      "texto": "Ajudo como posso",
-      "afirmacao": [
-        "Você tem empatia e se preocupa com os animais.",
-        "Continue ajudando sempre que possível."
-      ]
-    },
-    {
-      "texto": "Levo para casa",
-      "afirmacao": [
-        "Você tem grande compaixão e acolhe os animais.",
-        "Certifique-se de que poderá oferecer todos os cuidados necessários."
-      ]
-    }
-  ]
-}
+        ];
 
 
 let atual = 0;
