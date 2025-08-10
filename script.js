@@ -125,7 +125,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Lembre-se do motivo que fez você começar.";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
