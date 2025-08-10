@@ -95,7 +95,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
-let historiaFinal = "";
+let historiaFinal = " Fazer exercícios físicos é um dos melhores investimentos que você pode fazer por si mesmo. Além de fortalecer o corpo, eles melhoram o humor, aumentam a disposição e reduzem o estresse. A prática regular ajuda a prevenir doenças, melhora a postura e traz mais qualidade de vida. Seja uma caminhada leve, uma corrida, um treino na academia ou um esporte, o importante é se manter ativo. Exercitar-se não é apenas cuidar do corpo, mas também da mente e do bem-estar";
 
 function mostraPergunta() {
     if (atual >= perguntas.length) {
